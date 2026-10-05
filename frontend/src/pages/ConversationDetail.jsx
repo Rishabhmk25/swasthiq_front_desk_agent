@@ -83,13 +83,30 @@ export default function ConversationDetail() {
             }
             if (ev.kind === "tool") {
               const isErr = ev.tool_result_summary?.includes("Error") || ev.tool_result_summary?.includes("failed");
+              // Parse tool_args_json nicely if possible
+              let displayArgs = ev.tool_args_json;
+              try {
+                const p = JSON.parse(ev.tool_args_json);
+                displayArgs = JSON.stringify(p, null, 2);
+              } catch (e) {}
+
+              // Format tool_result_summary nicely if it contains "slots: "
+              let displaySummary = ev.tool_result_summary;
+              if (displaySummary && displaySummary.includes("slots: ")) {
+                const parts = displaySummary.split("slots: ");
+                displaySummary = parts[0] + "slots: [" + parts[1] + "]";
+              }
+              
               return (
                 <div key={i} className="transcript-row">
                   <div className="transcript-label">TOOL</div>
                   <div className={`transcript-tool ${isErr ? "error" : ""}`}>
-                    <div>{ev.tool_name}({ev.tool_args_json})</div>
+                    <div><strong>{ev.tool_name}</strong></div>
+                    <pre style={{ fontSize: "0.75rem", margin: "0.25rem 0", background: "rgba(0,0,0,0.05)", padding: "0.5rem" }}>
+                      {displayArgs}
+                    </pre>
                     <div style={{ marginTop: "0.5rem", color: isErr ? "#991b1b" : "#4b5563" }}>
-                      -&gt; {ev.tool_result_summary}
+                      &rarr; <strong>{displaySummary}</strong>
                     </div>
                   </div>
                 </div>
@@ -99,7 +116,7 @@ export default function ConversationDetail() {
           })}
 
           {data.banner && (
-            <div className="banner-red">
+            <div className="banner-red" style={{ marginTop: "1.5rem" }}>
               {data.banner}
             </div>
           )}
@@ -137,8 +154,8 @@ export default function ConversationDetail() {
               <span>{data.outcome.tokens}</span>
             </div>
             <div className="outcome-row">
-              <span className="outcome-label">latency (ms)</span>
-              <span>{data.outcome.latency_ms}</span>
+              <span className="outcome-label">latency</span>
+              <span>{(data.outcome.latency_ms / 1000).toFixed(1)}s</span>
             </div>
 
             <div style={{ marginTop: "2rem" }}>

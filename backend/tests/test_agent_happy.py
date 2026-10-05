@@ -42,8 +42,8 @@ def test_agent_reschedule_happy(store, extractor):
         conversation_id="test_reschedule",
         today="2026-10-01",
         turns=[
-            "Mera naam Lakshmi Iyer hai, 9812200222",
-            "Mera jo aaj ka appointment hai, usko kal subah kar do."
+            "Mera naam Priya Nair hai, 9812200104",
+            "Mera jo aaj ka appointment hai, usko parso subah kar do."
         ]
     )
     

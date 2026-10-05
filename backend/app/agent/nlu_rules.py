@@ -445,7 +445,7 @@ def extract_relation(text: str) -> tuple[Optional[str], Optional[str]]:
     for_match = re.search(r'\b([a-zA-Z]+)\s+(?:ke\s+liye|ko\s+(?:dikhana|milana|book))', text, re.IGNORECASE)
     if for_match:
         name = for_match.group(1).strip()
-        stop_words = {"checkup", "bukhar", "khansi", "report", "follow", "followup", "test", "blood", "medicine", "dawai", "treatment", "vaccine", "check", "appointment", "check-up", "dr", "doctor"}
+        stop_words = {"checkup", "bukhar", "khansi", "report", "follow", "followup", "test", "blood", "medicine", "dawai", "treatment", "vaccine", "check", "appointment", "check-up", "dr", "doctor", "benefits", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "aaj", "kal", "parso", "subah", "shaam", "raat", "dopehar", "baje", "claim"}
         if name.lower() not in DOCTOR_MAP and name.lower() not in stop_words:
             return (None, name)
 

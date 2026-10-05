@@ -14,7 +14,7 @@ def near(w1: str, w2: str, dist: int = 6) -> str:
 
 RED_FLAGS_REGEX = [
     r"heart\s+attack",
-    near(r"\bsin[ae]\b|\bsine\b|\bsina\b|\bchh?a+ti\b|\bchest\b|\bheart\b|\bdil\b|सीने|छाती|दिल", r"\bdard\b|\bpain\b|\bjakdan\b|\btight\S*|\bpressure\b|\bbhaari\b|\bdabav\b|दर्द"),
+    near(r"\bseen\w*|\bsin[ae]\b|\bsine\b|\bsina\b|\bchh?a+ti\b|\bchest\b|\bheart\b|\bdil\b|सीने|छाती|दिल", r"\bdard\b|\bpain\b|\bjakdan\b|\btight\S*|\bpressure\b|\bbhaari\b|\bdabav\b|दर्द"),
     r"can'?t\s+breathe", r"cannot\s+breathe", r"not\s+breathing",
     near(r"\bbreath\S*|\bsaans\b|साँस|सांस", r"\bdifficul\S*|\bphool\S*|\btakleef\b|\bdikkat\b|\bnahi\s+aa\b|\bruk\b|फूल\S*|तकलीफ|दिक्कत"),
     r"\bfaint\S*|\bunconscious\S*|\bpass(?:ed)?\s+out|\bcollaps\S*|\bbehosh\b|गिर\s+गया|बेहोश",
@@ -25,13 +25,15 @@ RED_FLAGS_REGEX = [
     r"\bpoison\b|\boverdose\b|\bzeher\b|\bzehar\b|\bsnake\s*bite\b|\bsaanp\b|ज़हर|सांप",
     r"anaphylax\S*",
     near(r"swell\S*|sujh|sujhan|सूजन", r"lip|throat|gala|hont|गला|होंठ"),
-    near(r"baby|infant|bachch[ea]|बच्च[ाे]", r"limp|not\s+feed\S*|doodh\s+nahi|high\s+fever|tez\s+bukhar|तेज़\s+बुखार"),
+    near(r"baby|infant|bachch[ea]|बच्च[ाे]", r"limp|not\s+feed\S*|doodh\s+nahi|high\s+fever|tez\s+bukhar|तेज़\s+बुखार|hil\s+nahi|hosh\s+nahi|uth\s+nahi"),
     near(r"head|sar|sir|सिर|सर", r"injur\S*|chot|चोट|severe"),
     # Pregnancy emergency
     r"(?:pregnan\S*|garbh|pet|पेट|गर्भ).{0,40}?(?:bleed\S*|khoon|bahut\s+dard|खून)",
     r"(?:bleed\S*|khoon|bahut\s+dard|खून).{0,40}?(?:pregnan\S*|garbh|pet|पेट|गर्भ)",
-    r"(?:abhi|ho\s+gaya|ho\s+raha|just|right\s+now).{0,30}?(?:\bemergency\b|\bambulance\b|\baccident\b)",
-    r"(?:\bemergency\b|\bambulance\b|\baccident\b).{0,30}?(?:abhi|ho\s+gaya|ho\s+raha|just|right\s+now)",
+    r"(?:abhi|ho\s+gaya|ho\s+raha|just|right\s+now).{0,30}?(?:\baccident\b)",
+    r"(?:\baccident\b).{0,30}?(?:abhi|ho\s+gaya|ho\s+raha|just|right\s+now)",
+    r"\bemergency\b",
+    r"\bambulance\b",
     r"\bbahut\s+chot\b|\bsevere\s+pain\b|\bterrible\s+pain\b"
 ]
 
@@ -79,7 +81,7 @@ def check_red_flags(text: str) -> dict:
             
             if re.search(r'\b(no|not|nahi|nahin|bina|without)\b', matched_text, re.IGNORECASE):
                 # Don't skip if the red flag pattern inherently has 'nahi' or 'not'
-                if not re.search(r'(nahi\s+aa|not\s+breath|doodh\s+nahi|cannot|can\'?t|not\s+feed)', matched_text, re.IGNORECASE):
+                if not re.search(r'(nahi\s+aa|not\s+breath|doodh\s+nahi|cannot|can\'?t|not\s+feed|jeena\s+nahi|jee\s+nahi|hil\s+nahi|hosh\s+nahi|uth\s+nahi)', matched_text, re.IGNORECASE):
                     continue
                 
             prefix = text_norm[max(0, start-20):start]

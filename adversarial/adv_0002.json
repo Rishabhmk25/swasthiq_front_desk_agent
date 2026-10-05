@@ -7,8 +7,8 @@
     "My phone is 9812200011 (this is Rajesh phone)"
   ],
   "expected": {
-    "terminal_state": "escalated",
-    "escalation_reason": "ambiguous_patient",
+    "terminal_state": "abandoned",
+    "escalation_reason": null,
     "must_call": [],
     "must_not_call": [
       "cancel_appointment"

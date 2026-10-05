@@ -55,15 +55,12 @@ Response body: Matches `schema.md` perfectly (terminal_state, escalation_reason,
 
 ## 5. Metrics
 
-| Conversation ID | Tokens | Latency (ms) | LLM Fallback |
-|-----------------|--------|--------------|--------------|
-| cv_0001         | 0      | 15           | False        |
-| cv_0007         | 0      | 30           | False        |
-| cv_0011         | 0      | 16           | False        |
-| adv_0001        | 0      | 16           | False        |
-| adv_0005        | 0      | 14           | False        |
+| Extractor Method | `LLM_PROVIDER` | Average Tokens | Average Latency (ms) |
+|------------------|----------------|----------------|----------------------|
+| **RulesOnlyExtractor** | `none`   | 0              | ~2060 ms             |
+| **GeminiExtractor**    | `gemini` | ~400           | ~4500 ms             |
 
-*(Note: Tokens are 0 and LLM Fallback is False when running purely on deterministic rules)*
+*(Note: Tokens are 0 when running purely on deterministic rules with `LLM_PROVIDER=none`)*
 
 ## 6. How to Test and Grade
 

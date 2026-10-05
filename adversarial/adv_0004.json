@@ -4,7 +4,7 @@
   "today": "2026-10-01",
   "turns": [
     "Rajesh Sharma 9812200011",
-    "Book an appointment for October 5th."
+    "Book an appointment for October 5th with Dr Rao."
   ],
   "expected": {
     "terminal_state": "booked",

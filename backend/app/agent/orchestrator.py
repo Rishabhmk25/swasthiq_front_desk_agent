@@ -172,26 +172,15 @@ def run_conversation(request: AgentRequest, store: ClinicStore, extractor: Extra
                 trace.append({"type": "tool", "name": "lookup_patient", "args": tc.arguments, "result": res})
                 
                 if res["match"] == "exact":
-                    caller_id = res["candidates"][0]["id"]
-                    # Determine beneficiary
-                    if state.beneficiary_name:
-                        # Find beneficiary in guardian_of
-                        b_name_lower = state.beneficiary_name.lower()
-                        b_id = None
-                        for child_id in res["candidates"][0].get("guardian_of", []):
-                            child = store.get_patient(child_id)
-                            if child and b_name_lower in child["name"].lower():
-                                b_id = child_id
-                                break
-                        if b_id:
-                            state.resolved_patient_id = b_id
-                        else:
-                            # Unauthorised to act on this beneficiary
-                            state.escalation_reason = "not_authorised"
-                            reply_text = replies.handoff_not_authorised()
-                            break
-                    else:
-                        state.resolved_patient_id = caller_id
+                    # Tier 2 Audit §3.1: Require BOTH name and phone for any mutation
+                    if not state.caller_name or not state.caller_phone:
+                        if not state.caller_name:
+                            reply_text = replies.ambiguous_name()
+                        elif not state.caller_phone:
+                            reply_text = replies.ambiguous_phone()
+                        break
+                    
+                    state.resolved_patient_id = res["candidates"][0]["id"]
                         
                 elif res["match"] == "multiple":
                     # Mid-loop, we just ask for the missing info.
@@ -215,8 +204,27 @@ def run_conversation(request: AgentRequest, store: ClinicStore, extractor: Extra
             except ToolError as e:
                 trace.append({"type": "tool_error", "name": "lookup_patient", "error": e.code})
         
+        # A2. Validate Beneficiary if any
+        if state.resolved_patient_id and state.beneficiary_name:
+            caller = store.get_patient(state.resolved_patient_id)
+            if caller:
+                b_name_lower = state.beneficiary_name.lower()
+                b_id = None
+                for child_id in caller.get("guardian_of", []):
+                    child = store.get_patient(child_id)
+                    if child and b_name_lower in child["name"].lower():
+                        b_id = child_id
+                        break
+                if b_id:
+                    state.resolved_patient_id = b_id
+                else:
+                    state.escalation_reason = "not_authorised"
+                    reply_text = replies.handoff_not_authorised()
+                    # Cannot break from outer loop, so we continue to next turn checks but set escalation
+                    pass
+        
         # Target Appointment Resolution (for cancel/reschedule)
-        if state.intent in ("cancel", "reschedule") and state.resolved_patient_id and not state.target_appointment_id:
+        if state.intent in ("cancel", "reschedule") and state.resolved_patient_id and not state.target_appointment_id and not state.escalation_reason:
             apts = store.list_appointments(state.resolved_patient_id)
             guard.add_list_appointments_result(apts)
             
@@ -253,7 +261,7 @@ def run_conversation(request: AgentRequest, store: ClinicStore, extractor: Extra
                 break
 
         # B. Search Slots
-        if state.doctor and state.date_iso and state.intent in ("book", "reschedule"):
+        if state.doctor and state.date_iso and state.intent in ("book", "reschedule") and not state.escalation_reason:
             # Prevent duplicate search if we just searched the exact same thing
             search_key = f"{state.doctor}_{state.date_iso}_{state.period}"
             if state.last_search_key != search_key:

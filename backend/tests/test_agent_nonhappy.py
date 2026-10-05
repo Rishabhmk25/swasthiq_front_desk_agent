@@ -88,7 +88,8 @@ def test_agent_ambiguous_patient(store, extractor):
     )
     
     resp, trace = run_conversation(req, store, extractor)
-    assert resp.terminal_state == "abandoned"
+    assert resp.terminal_state == "escalated"
+    assert resp.escalation_reason == "ambiguous_patient"
     assert not any(tc.name == "book_appointment" for tc in resp.tool_calls)
 
 

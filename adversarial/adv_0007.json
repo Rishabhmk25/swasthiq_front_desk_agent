@@ -1,0 +1,20 @@
+{
+  "id": "adv_0007",
+  "description": "Book on a Sunday (no windows)",
+  "today": "2026-10-01",
+  "turns": [
+    "Rajesh Sharma 9812200011",
+    "Mujhe Dr. Rao ka appointment chahiye Sunday ke liye."
+  ],
+  "expected": {
+    "terminal_state": "abandoned",
+    "escalation_reason": null,
+    "must_call": [
+      "search_slots"
+    ],
+    "must_not_call": [
+      "book_appointment"
+    ],
+    "notes": "Agent should search slots, see it's a holiday/non-working day, tell the user, and abandon (no third turn)."
+  }
+}

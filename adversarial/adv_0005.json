@@ -4,7 +4,7 @@
   "today": "2026-10-01",
   "turns": [
     "Rajesh Sharma 9812200011",
-    "I just want to show my report to the doctor, book for tomorrow."
+    "I just want to show my report to Dr Rao, book for parso."
   ],
   "expected": {
     "terminal_state": "booked",

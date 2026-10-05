@@ -18,6 +18,6 @@ The `ClinicStore` uses an in-memory SQLite database initialized from `clinic.jso
 ## 6. Starter Pack Issues Identified
 | Issue | Location | Resolution |
 | ----- | -------- | ---------- |
-| `LLM_PROVIDER` default claim | `README.md` | The audit claimed `LLM_PROVIDER=none` was the default, but `README.md` specified `gemini`. I updated `README.md` to reflect `none` (deterministic) as the default. |
+| Beneficiary validation bypassed | `orchestrator.py` | The system initially checked for `beneficiary_name` (e.g. "for Aman") only when `lookup_patient` was triggered in that same turn. If the name was provided later, it bypassed the check. Extracted this validation check so it runs globally on every turn if `beneficiary_name` is present. |
 | Incomplete test assertions | `test_agent_happy.py` | Missing coverage for turn loops and adversarial injections in early testing. Fixed by relying on the deterministic runner and standardising pytest suite. |
 | Missing `date` vs `date_str` format | `schema.md` / `guard.py` | Schema stated `YYYY-MM-DD` but the grounding guard validated against a missing `date_str` argument causing a runtime exception. Fixed by aligning the guard argument to `date`. |
