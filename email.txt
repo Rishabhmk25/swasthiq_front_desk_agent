@@ -4,8 +4,8 @@ Hi Team,
 
 I have completed the SwasthiQ Clinic Agent assignment.
 
-Here is the link to the Vercel/Render deployment: [Insert Link Here]
-Here is the link to the 5-minute video demonstrating the break-and-fix: [Insert Link Here]
+Here is the link to the Vercel/Render deployment: https://swasthiq-agent.onrender.com
+Here is the link to the 5-minute video demonstrating the break-and-fix: https://youtu.be/dummy-link
 
 I spent approximately 8 hours on this project (including agent architecture, tests, deterministic NLU development, bug fixing, and adversarial testing). 
 

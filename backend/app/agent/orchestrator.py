@@ -32,6 +32,7 @@ class ConversationState:
     caller_phone: str | None = None
     beneficiary_relation: str | None = None
     beneficiary_name: str | None = None
+    beneficiary_verified: bool = False
     
     # Resolved entities
     resolved_patient_id: str | None = None
@@ -178,9 +179,8 @@ def run_conversation(request: AgentRequest, store: ClinicStore, extractor: Extra
                             reply_text = replies.ambiguous_name()
                         elif not state.caller_phone:
                             reply_text = replies.ambiguous_phone()
-                        break
-                    
-                    state.resolved_patient_id = res["candidates"][0]["id"]
+                    else:
+                        state.resolved_patient_id = res["candidates"][0]["id"]
                         
                 elif res["match"] == "multiple":
                     # Mid-loop, we just ask for the missing info.
@@ -200,12 +200,14 @@ def run_conversation(request: AgentRequest, store: ClinicStore, extractor: Extra
                         state.escalation_reason = "not_authorised"
                         reply_text = replies.handoff_not_authorised()
                         break
+                    else:
+                        reply_text = replies.patient_not_found(state.caller_name or state.caller_phone)
                     
             except ToolError as e:
                 trace.append({"type": "tool_error", "name": "lookup_patient", "error": e.code})
         
         # A2. Validate Beneficiary if any
-        if state.resolved_patient_id and state.beneficiary_name:
+        if state.resolved_patient_id and state.beneficiary_name and not state.beneficiary_verified:
             caller = store.get_patient(state.resolved_patient_id)
             if caller:
                 b_name_lower = state.beneficiary_name.lower()
@@ -217,6 +219,7 @@ def run_conversation(request: AgentRequest, store: ClinicStore, extractor: Extra
                         break
                 if b_id:
                     state.resolved_patient_id = b_id
+                    state.beneficiary_verified = True
                 else:
                     state.escalation_reason = "not_authorised"
                     reply_text = replies.handoff_not_authorised()

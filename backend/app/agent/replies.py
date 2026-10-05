@@ -65,3 +65,5 @@ def noop() -> str:
 
 def abandoned_no_slots() -> str:
     return "Maaf kijiye, us din koi slot free nahi hai."
+def patient_not_found(name_or_phone: str | None) -> str:
+    return f"Main {name_or_phone} naam se koi record nahi dhoondh paa raha."

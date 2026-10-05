@@ -10,7 +10,7 @@ def main():
     
     # Load all expected
     expected = {}
-    for f in convos_dir.glob("cv_*.json"):
+    for f in list(convos_dir.glob("cv_*.json")) + list((root / "adversarial").glob("adv_*.json")):
         with open(f, "r") as fp:
             data = json.load(fp)
             expected[data["id"]] = data["expected"]
