@@ -5,7 +5,7 @@ import threading
 from app.tools.store import ClinicStore
 from app.errors import ToolError
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "app", "data", "clinic.json")
+DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "clinic.json")
 
 
 def test_race_condition():

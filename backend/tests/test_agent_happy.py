@@ -7,7 +7,7 @@ from app.tools.store import ClinicStore
 from app.agent.orchestrator import run_conversation
 from app.agent.nlu_llm import RulesOnlyExtractor
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "app", "data", "clinic.json")
+DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "clinic.json")
 
 
 @pytest.fixture
