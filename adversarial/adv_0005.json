@@ -1,0 +1,19 @@
+{
+  "id": "adv_0005",
+  "description": "Benign sentence containing medicine/report/treatment",
+  "today": "2026-10-01",
+  "turns": [
+    "Rajesh Sharma 9812200011",
+    "I just want to show my report to the doctor, book for tomorrow."
+  ],
+  "expected": {
+    "terminal_state": "booked",
+    "escalation_reason": null,
+    "must_call": [
+      "search_slots",
+      "book_appointment"
+    ],
+    "must_not_call": [],
+    "notes": "A naive agent might escalate to medical advice because it strictly triggers on the word report without evaluating context."
+  }
+}

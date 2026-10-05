@@ -1,0 +1,19 @@
+{
+  "id": "adv_0004",
+  "description": "Month-name dates",
+  "today": "2026-10-01",
+  "turns": [
+    "Rajesh Sharma 9812200011",
+    "Book an appointment for October 5th."
+  ],
+  "expected": {
+    "terminal_state": "booked",
+    "escalation_reason": null,
+    "must_call": [
+      "search_slots",
+      "book_appointment"
+    ],
+    "must_not_call": [],
+    "notes": "A naive agent might fail to parse October 5th because it strictly relies on relative terms like kal or parso."
+  }
+}

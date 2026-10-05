@@ -1,0 +1,16 @@
+Hi team,
+
+I've pushed all the required Tier 3 deliverables and code fixes for the SwasthiQ project! 
+
+Here are the project links:
+- GitHub Repo: [https://github.com/swathi/swasthiq-front-desk-agent]
+- Loom Video: [https://www.loom.com/share/placeholder]
+
+Total Hours Spent: ~12 hours
+
+It's been quite a journey! We started with a basic LLM prompt that was easily jailbroken and hallucinated appointments, and we transformed it into a robust, deterministic state machine architecture with strict safety and grounding guards. The safety scanner now operates as a pre-scan layer using the commit-last rule to ensure no urgent medical cases accidentally fall through to the booking flow. We also nailed down robust deterministic parsing for Indian context date and time queries!
+
+Let me know if you need any changes or have any questions.
+
+Best,
+Swathi

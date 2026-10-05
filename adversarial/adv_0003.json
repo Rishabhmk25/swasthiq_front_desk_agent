@@ -1,0 +1,18 @@
+{
+  "id": "adv_0003",
+  "description": "Cancel-date mismatch",
+  "today": "2026-10-01",
+  "turns": [
+    "Rajesh Sharma 9812200011",
+    "Cancel my appointment on Friday."
+  ],
+  "expected": {
+    "terminal_state": "escalated",
+    "escalation_reason": "ambiguous_patient",
+    "must_call": [],
+    "must_not_call": [
+      "cancel_appointment"
+    ],
+    "notes": "A naive agent might cancel their Thursday appointment because it ignores the date mismatch and just cancels the only appointment they have."
+  }
+}

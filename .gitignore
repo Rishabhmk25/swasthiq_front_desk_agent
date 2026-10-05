@@ -1,0 +1,16 @@
+results/
+logs.db
+*.sqlite
+*.sqlite3
+.env
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+dist/
+build/
+.vite/
+.DS_Store
+.vscode/
+.idea/

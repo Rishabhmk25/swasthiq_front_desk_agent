@@ -1,0 +1,1065 @@
+{
+  "clinic": {
+    "id": "cl_sunrise_large",
+    "name": "Sunrise Clinic (Large Branch)",
+    "city": "Dehradun",
+    "timezone": "Asia/Kolkata",
+    "slot_minutes": 15,
+    "reference_date": "2026-11-01"
+  },
+  "holidays": [
+    "2026-11-14"
+  ],
+  "doctors": [
+    {
+      "id": "d_001",
+      "name": "Dr. Sharma",
+      "speciality": "Orthopedic",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_002",
+      "name": "Dr. Patel",
+      "speciality": "Orthopedic",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_003",
+      "name": "Dr. Reddy",
+      "speciality": "Orthopedic",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_004",
+      "name": "Dr. Iyer",
+      "speciality": "General Physician",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_005",
+      "name": "Dr. Das",
+      "speciality": "Orthopedic",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_006",
+      "name": "Dr. Mehta",
+      "speciality": "Pediatrician",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_007",
+      "name": "Dr. Khan",
+      "speciality": "Cardiologist",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_008",
+      "name": "Dr. Gupta",
+      "speciality": "Orthopedic",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_009",
+      "name": "Dr. Joshi",
+      "speciality": "Cardiologist",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "d_010",
+      "name": "Dr. Banerjee",
+      "speciality": "General Physician",
+      "windows": [
+        {
+          "day": "Mon",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Mon",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Tue",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Tue",
+          "start": "14:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Wed",
+          "start": "09:00",
+          "end": "13:00"
+        },
+        {
+          "day": "Thu",
+          "start": "14:00",
+          "end": "20:00"
+        },
+        {
+          "day": "Fri",
+          "start": "09:00",
+          "end": "18:00"
+        },
+        {
+          "day": "Sat",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    }
+  ],
+  "patients": [
+    {
+      "id": "pt_0001",
+      "name": "Pooja Verma",
+      "phone": "9812276701",
+      "dob": "1955-07-26"
+    },
+    {
+      "id": "pt_0002",
+      "name": "Vikram Sharma",
+      "phone": "9812222957",
+      "dob": "1994-11-21"
+    },
+    {
+      "id": "pt_0003",
+      "name": "Amit Rao",
+      "phone": "9812235097",
+      "dob": "1980-07-24"
+    },
+    {
+      "id": "pt_0004",
+      "name": "Sneha Menon",
+      "phone": "9812232948",
+      "dob": "1969-01-16"
+    },
+    {
+      "id": "pt_0005",
+      "name": "Sneha Yadav",
+      "phone": "9812267852",
+      "dob": "1994-06-08"
+    },
+    {
+      "id": "pt_0006",
+      "name": "Priya Rao",
+      "phone": "9812263686",
+      "dob": "1951-08-08"
+    },
+    {
+      "id": "pt_0007",
+      "name": "Sneha Verma",
+      "phone": "9812254538",
+      "dob": "1958-07-05"
+    },
+    {
+      "id": "pt_0008",
+      "name": "Karan Kumar",
+      "phone": "9812275527",
+      "dob": "2007-01-13"
+    },
+    {
+      "id": "pt_0009",
+      "name": "Amit Chauhan",
+      "phone": "9812268647",
+      "dob": "2005-06-13"
+    },
+    {
+      "id": "pt_0010",
+      "name": "Rahul Singh",
+      "phone": "9812230494",
+      "dob": "1977-09-05"
+    },
+    {
+      "id": "pt_0011",
+      "name": "Riya Yadav",
+      "phone": "9812250552",
+      "dob": "1988-01-25"
+    },
+    {
+      "id": "pt_0012",
+      "name": "Riya Verma",
+      "phone": "9812224709",
+      "dob": "1982-01-05"
+    },
+    {
+      "id": "pt_0013",
+      "name": "Vikram Rao",
+      "phone": "9812244788",
+      "dob": "1973-05-17"
+    },
+    {
+      "id": "pt_0014",
+      "name": "Riya Bose",
+      "phone": "9812231932",
+      "dob": "1953-11-17"
+    },
+    {
+      "id": "pt_0015",
+      "name": "Sneha Nair",
+      "phone": "9812268717",
+      "dob": "2004-12-14"
+    },
+    {
+      "id": "pt_0016",
+      "name": "Sneha Rao",
+      "phone": "9812284170",
+      "dob": "1987-04-17"
+    },
+    {
+      "id": "pt_0017",
+      "name": "Pooja Chauhan",
+      "phone": "9812270721",
+      "dob": "1996-01-03"
+    },
+    {
+      "id": "pt_0018",
+      "name": "Neha Menon",
+      "phone": "9812251139",
+      "dob": "2002-07-15"
+    },
+    {
+      "id": "pt_0019",
+      "name": "Riya Bose",
+      "phone": "9812242716",
+      "dob": "1963-11-21"
+    },
+    {
+      "id": "pt_0020",
+      "name": "Neha Singh",
+      "phone": "9812260834",
+      "dob": "1986-10-06"
+    },
+    {
+      "id": "pt_0021",
+      "name": "Priya Menon",
+      "phone": "9812270463",
+      "dob": "1963-02-23"
+    },
+    {
+      "id": "pt_0022",
+      "name": "Sneha Kumar",
+      "phone": "9812294524",
+      "dob": "1999-06-06"
+    },
+    {
+      "id": "pt_0023",
+      "name": "Sneha Menon",
+      "phone": "9812258451",
+      "dob": "2001-11-21"
+    },
+    {
+      "id": "pt_0024",
+      "name": "Priya Verma",
+      "phone": "9812237297",
+      "dob": "2008-08-01"
+    },
+    {
+      "id": "pt_0025",
+      "name": "Arjun Menon",
+      "phone": "9812266603",
+      "dob": "1956-03-20"
+    },
+    {
+      "id": "pt_0026",
+      "name": "Vikram Kumar",
+      "phone": "9812263445",
+      "dob": "1970-10-23"
+    },
+    {
+      "id": "pt_0027",
+      "name": "Priya Menon",
+      "phone": "9812267652",
+      "dob": "1977-06-06"
+    },
+    {
+      "id": "pt_0028",
+      "name": "Sneha Verma",
+      "phone": "9812232378",
+      "dob": "1987-07-08"
+    },
+    {
+      "id": "pt_0029",
+      "name": "Sneha Kumar",
+      "phone": "9812269965",
+      "dob": "1968-09-07"
+    },
+    {
+      "id": "pt_0030",
+      "name": "Karan Menon",
+      "phone": "9812296953",
+      "dob": "2010-08-23"
+    },
+    {
+      "id": "pt_0031",
+      "name": "Vikram Bose",
+      "phone": "9812235842",
+      "dob": "1986-01-02"
+    },
+    {
+      "id": "pt_0032",
+      "name": "Karan Bose",
+      "phone": "9812245643",
+      "dob": "1976-03-01"
+    },
+    {
+      "id": "pt_0033",
+      "name": "Amit Singh",
+      "phone": "9812220257",
+      "dob": "2015-07-01"
+    },
+    {
+      "id": "pt_0034",
+      "name": "Sneha Yadav",
+      "phone": "9812212178",
+      "dob": "1999-04-27"
+    },
+    {
+      "id": "pt_0035",
+      "name": "Amit Nair",
+      "phone": "9812267506",
+      "dob": "1995-06-11"
+    },
+    {
+      "id": "pt_0036",
+      "name": "Arjun Rao",
+      "phone": "9812214460",
+      "dob": "1966-09-25"
+    },
+    {
+      "id": "pt_0037",
+      "name": "Karan Sharma",
+      "phone": "9812215948",
+      "dob": "1993-05-21"
+    },
+    {
+      "id": "pt_0038",
+      "name": "Vikram Singh",
+      "phone": "9812224297",
+      "dob": "1997-10-08"
+    },
+    {
+      "id": "pt_0039",
+      "name": "Amit Yadav",
+      "phone": "9812254389",
+      "dob": "1957-03-05"
+    },
+    {
+      "id": "pt_0040",
+      "name": "Priya Chauhan",
+      "phone": "9812234153",
+      "dob": "2013-11-08"
+    },
+    {
+      "id": "pt_0041",
+      "name": "Neha Nair",
+      "phone": "9812224685",
+      "dob": "1998-04-27"
+    },
+    {
+      "id": "pt_0042",
+      "name": "Pooja Singh",
+      "phone": "9812221133",
+      "dob": "1993-01-01"
+    },
+    {
+      "id": "pt_0043",
+      "name": "Rahul Verma",
+      "phone": "9812262816",
+      "dob": "1964-04-06"
+    },
+    {
+      "id": "pt_0044",
+      "name": "Amit Bose",
+      "phone": "9812290145",
+      "dob": "1973-10-13"
+    },
+    {
+      "id": "pt_0045",
+      "name": "Karan Bose",
+      "phone": "9812274235",
+      "dob": "1958-12-01"
+    },
+    {
+      "id": "pt_0046",
+      "name": "Riya Chauhan",
+      "phone": "9812233932",
+      "dob": "2002-10-16"
+    },
+    {
+      "id": "pt_0047",
+      "name": "Sneha Menon",
+      "phone": "9812271952",
+      "dob": "1979-10-10"
+    },
+    {
+      "id": "pt_0048",
+      "name": "Pooja Kumar",
+      "phone": "9812217364",
+      "dob": "1997-02-14"
+    },
+    {
+      "id": "pt_0049",
+      "name": "Pooja Nair",
+      "phone": "9812270401",
+      "dob": "2008-11-09"
+    },
+    {
+      "id": "pt_0050",
+      "name": "Sneha Chauhan",
+      "phone": "9812216404",
+      "dob": "1981-11-16"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "ap_0001",
+      "patient_id": "pt_0037",
+      "doctor_id": "d_004",
+      "date": "2026-11-05",
+      "start": "09:00",
+      "end": "09:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0002",
+      "patient_id": "pt_0017",
+      "doctor_id": "d_002",
+      "date": "2026-11-09",
+      "start": "13:00",
+      "end": "13:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0003",
+      "patient_id": "pt_0002",
+      "doctor_id": "d_007",
+      "date": "2026-11-06",
+      "start": "14:00",
+      "end": "14:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0004",
+      "patient_id": "pt_0020",
+      "doctor_id": "d_003",
+      "date": "2026-11-03",
+      "start": "14:00",
+      "end": "14:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0005",
+      "patient_id": "pt_0034",
+      "doctor_id": "d_007",
+      "date": "2026-11-11",
+      "start": "11:00",
+      "end": "11:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0006",
+      "patient_id": "pt_0017",
+      "doctor_id": "d_005",
+      "date": "2026-11-05",
+      "start": "13:00",
+      "end": "13:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0007",
+      "patient_id": "pt_0049",
+      "doctor_id": "d_007",
+      "date": "2026-11-01",
+      "start": "11:00",
+      "end": "11:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0008",
+      "patient_id": "pt_0012",
+      "doctor_id": "d_009",
+      "date": "2026-11-01",
+      "start": "12:00",
+      "end": "12:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0009",
+      "patient_id": "pt_0030",
+      "doctor_id": "d_008",
+      "date": "2026-11-09",
+      "start": "16:00",
+      "end": "16:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0010",
+      "patient_id": "pt_0048",
+      "doctor_id": "d_002",
+      "date": "2026-11-09",
+      "start": "10:00",
+      "end": "10:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0011",
+      "patient_id": "pt_0038",
+      "doctor_id": "d_004",
+      "date": "2026-11-02",
+      "start": "15:00",
+      "end": "15:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0012",
+      "patient_id": "pt_0016",
+      "doctor_id": "d_004",
+      "date": "2026-11-03",
+      "start": "10:00",
+      "end": "10:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0013",
+      "patient_id": "pt_0028",
+      "doctor_id": "d_007",
+      "date": "2026-11-01",
+      "start": "16:00",
+      "end": "16:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0014",
+      "patient_id": "pt_0028",
+      "doctor_id": "d_005",
+      "date": "2026-11-01",
+      "start": "11:00",
+      "end": "11:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0015",
+      "patient_id": "pt_0038",
+      "doctor_id": "d_002",
+      "date": "2026-11-10",
+      "start": "14:00",
+      "end": "14:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0016",
+      "patient_id": "pt_0014",
+      "doctor_id": "d_003",
+      "date": "2026-11-02",
+      "start": "17:00",
+      "end": "17:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0017",
+      "patient_id": "pt_0049",
+      "doctor_id": "d_005",
+      "date": "2026-11-10",
+      "start": "17:00",
+      "end": "17:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0018",
+      "patient_id": "pt_0030",
+      "doctor_id": "d_005",
+      "date": "2026-11-10",
+      "start": "16:00",
+      "end": "16:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0019",
+      "patient_id": "pt_0036",
+      "doctor_id": "d_002",
+      "date": "2026-11-03",
+      "start": "15:00",
+      "end": "15:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0020",
+      "patient_id": "pt_0008",
+      "doctor_id": "d_009",
+      "date": "2026-11-02",
+      "start": "17:00",
+      "end": "17:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0021",
+      "patient_id": "pt_0030",
+      "doctor_id": "d_002",
+      "date": "2026-11-10",
+      "start": "15:00",
+      "end": "15:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0022",
+      "patient_id": "pt_0011",
+      "doctor_id": "d_002",
+      "date": "2026-11-07",
+      "start": "09:00",
+      "end": "09:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0023",
+      "patient_id": "pt_0042",
+      "doctor_id": "d_004",
+      "date": "2026-11-05",
+      "start": "15:00",
+      "end": "15:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0024",
+      "patient_id": "pt_0032",
+      "doctor_id": "d_010",
+      "date": "2026-11-11",
+      "start": "10:00",
+      "end": "10:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0025",
+      "patient_id": "pt_0013",
+      "doctor_id": "d_005",
+      "date": "2026-11-03",
+      "start": "17:00",
+      "end": "17:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0026",
+      "patient_id": "pt_0001",
+      "doctor_id": "d_005",
+      "date": "2026-11-06",
+      "start": "09:00",
+      "end": "09:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0027",
+      "patient_id": "pt_0036",
+      "doctor_id": "d_003",
+      "date": "2026-11-07",
+      "start": "12:00",
+      "end": "12:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0028",
+      "patient_id": "pt_0033",
+      "doctor_id": "d_006",
+      "date": "2026-11-01",
+      "start": "14:00",
+      "end": "14:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0029",
+      "patient_id": "pt_0010",
+      "doctor_id": "d_004",
+      "date": "2026-11-04",
+      "start": "11:00",
+      "end": "11:15",
+      "status": "booked"
+    },
+    {
+      "id": "ap_0030",
+      "patient_id": "pt_0012",
+      "doctor_id": "d_010",
+      "date": "2026-11-06",
+      "start": "15:00",
+      "end": "15:15",
+      "status": "booked"
+    }
+  ],
+  "leaves": [
+    {
+      "doctor_id": "d_001",
+      "date": "2026-11-02"
+    }
+  ]
+}
